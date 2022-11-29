@@ -22,9 +22,14 @@ public class HelloController {
     }
 
     @FXML
-    protected void onDontButtonClick(){
-        btnDont.setText("You pressed me... ouch!");
-        circle.setFill(Paint.valueOf("red"));
+    protected void onDontButtonClick() {
+        if (btnDont.getText().equals("Don't Press Me")) {
+            btnDont.setText("You pressed me... ouch!");
+            circle.setFill(Paint.valueOf("red"));
+        } else {
+            btnDont.setText("Don't Press Me");
+            circle.setFill(Paint.valueOf("blue"));
+        }
     }
 
 }
